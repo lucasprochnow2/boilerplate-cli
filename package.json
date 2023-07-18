@@ -1,0 +1,17 @@
+{
+  "name": "boilerplate-cli",
+  "version": "1.0.0",
+  "description": "NodeJS cli to bootstrap applications",
+  "main": "index.js",
+  "author": "Lucas Prochnow",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@inquirer/prompts": "^3.0.0",
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0"
+  },
+  "bin": {
+    "todo": "index.js"
+  }  
+}
