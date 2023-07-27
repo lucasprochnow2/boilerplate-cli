@@ -2,9 +2,11 @@ import select from '@inquirer/select';
 import input from '@inquirer/input';
 import shell from 'shelljs';
 
-async function showFrontendOptions() {
+import intl from './intl.js';
+
+async function showFrontendOptions(language) {
   const answer = await select({
-    message: 'Selecione o framework frontend que você deseja trabalhar',
+    message: intl.message[language],
     choices: [
       {
         name: 'React',
@@ -20,7 +22,7 @@ async function showFrontendOptions() {
   });
 
   if (answer === 'react') {
-    const reactDirName = await input({ message: 'Qual o nome do diretório do projeto?' });
+    const reactDirName = await input({ message: intl.reactDirectoryName[language] });
     shell.exec(`npx create-react-app ${reactDirName}`);
   }
 

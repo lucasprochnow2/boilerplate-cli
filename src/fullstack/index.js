@@ -1,9 +1,11 @@
 import select from '@inquirer/select';
 import shell from 'shelljs';
 
-async function showFullstackOptions() {
+import intl from './intl.js';
+
+async function showFullstackOptions(language) {
   const answer = await select({
-    message: 'Selecione o framework fullstack que você deseja trabalhar',
+    message: intl.message[language],
     choices: [
       {
         name: 'Next.js',

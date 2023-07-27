@@ -2,7 +2,7 @@
   "name": "boilerplate-cli",
   "version": "1.0.0",
   "description": "NodeJS cli to bootstrap applications",
-  "main": "src/index.js",
+  "main": "src/startMenu/index.js",
   "author": "Lucas Prochnow",
   "license": "MIT",
   "type": "module",
@@ -13,6 +13,6 @@
     "shelljs": "^0.8.5"
   },
   "bin": {
-    "newproject": "src/index.js"
+    "newproject": "src/startMenu/index.js"
   }
 }

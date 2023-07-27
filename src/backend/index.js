@@ -2,9 +2,11 @@ import select from '@inquirer/select';
 import input from '@inquirer/input';
 import shell from 'shelljs';
 
-async function showBackendOptions() {
+import intl from './intl.js';
+
+async function showBackendOptions(language) {
   const answer = await select({
-    message: 'Selecione a tecnologia backend que você deseja trabalhar',
+    message: intl.message[language],
     choices: [
       {
         name: 'NodeJS',
@@ -15,7 +17,7 @@ async function showBackendOptions() {
   });
 
   if (answer === 'nodejs') {
-    const nodeDirName = await input({ message: 'Qual o nome do diretório em que deseja clonar o projeto?' });
+    const nodeDirName = await input({ message: intl.directoryInputMessage[language] });
     shell.exec(`git clone https://github.com/lucasprochnow2/DI-with-awilix.git ${nodeDirName}`);
   }
 }
