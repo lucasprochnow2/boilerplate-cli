@@ -5,6 +5,7 @@ import select from '@inquirer/select';
 
 import showFrontendOptions from './frontend.js';
 import showFullstackOptions from './fullstack.js';
+import showBackendOptions from './backend.js';
 
 program.version(1.0);
 
@@ -39,6 +40,10 @@ program
 
     if (answer === 'fullstack') {
       await showFullstackOptions();
+    }
+
+    if (answer === 'backend') {
+      await showBackendOptions();
     }
   });
 
