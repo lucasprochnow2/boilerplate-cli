@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 import { program } from 'commander';
-import chalk from 'chalk';
 import select from '@inquirer/select';
 
 import showFrontendOptions from './frontend.js';
+import showFullstackOptions from './fullstack.js';
 
 program.version(1.0);
 
@@ -35,8 +35,10 @@ program
 
     if (answer === 'frontend') {
       await showFrontendOptions();
-    } else {
-      console.log(chalk.yellow('WIP...'));
+    }
+
+    if (answer === 'fullstack') {
+      await showFullstackOptions();
     }
   });
 
