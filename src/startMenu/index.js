@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { program } from 'commander';
+import { program, Option } from 'commander';
 import select from '@inquirer/select';
 
 import showFrontendOptions from '../frontend/index.js';
@@ -13,7 +13,7 @@ program.version(1.0);
 program
   .command('start')
   .description('Setup to start a new development project')
-  .option('-l, --lang <language>', 'Change the setup language: en, pt', 'en')
+  .addOption(new Option('-l, --lang <language>', 'Change the setup language', 'en').choices(['pt', 'en']).default('en'))
   .action(async (options) => {
     const language = options.lang;
 
