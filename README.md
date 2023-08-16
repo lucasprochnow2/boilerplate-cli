@@ -15,8 +15,8 @@
 </p> 
 
 ## Docs in other language 
-<!-- TODO -->
-Click here to read the docs in english.
+
+[Click here](https://github.com/lucasprochnow2/boilerplate-cli/blob/main/README-EN.md#boilerplate-cli) to read the docs in english.
 
 ## Descrição
 
